@@ -1,5 +1,6 @@
 package com.mindex.challenge.data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
@@ -59,5 +60,12 @@ public class Employee {
 
     public void setDirectReports(List<Employee> directReports) {
         this.directReports = directReports;
+    }
+
+    public void addDirectReport(Employee employee){
+        if(this.directReports == null){
+            this.directReports = new ArrayList<Employee>();
+        }
+        this.directReports.add(employee);
     }
 }
